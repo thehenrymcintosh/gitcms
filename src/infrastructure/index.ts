@@ -1,2 +1,1 @@
-export const infrastructure = () => "infrastructure";
-
+export const infrastructure = (): string => 'infrastructure';

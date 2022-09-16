@@ -1,7 +1,8 @@
-import {domain} from "@domain/index";
+import { domain } from '@domain/index';
 
-describe("Test suite", () => {
-    it("Should execute", () => {
-        expect(domain()).toEqual("domaininfrastructure");
-    })
-})
+describe('Test suite', () => {
+  it('Should execute', () => {
+    const f = domain();
+    expect(f).toEqual('domaininfrastructure');
+  });
+});

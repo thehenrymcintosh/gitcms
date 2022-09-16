@@ -1,4 +1,2 @@
-import {infrastructure} from "@infrastructure/index";
 
-
-export const domain = () => "domain" + infrastructure();
+export const domain = (): string => 'domaininfrastructure';

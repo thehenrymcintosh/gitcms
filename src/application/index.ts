@@ -1,1 +1,1 @@
-export const application = () => "application";
+export const application = (): string => 'application';

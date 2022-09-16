@@ -1,5 +1,6 @@
-import {domain} from "@domain/index";
+import { domain } from '@domain/index';
 
-console.log("I am running!");
+console.log('I am running!');
 
-export const dummyFn = () => console.log(domain())
+export const dummyFn = (): void => console.log(domain());
+console.log(dummyFn());

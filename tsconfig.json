@@ -9,6 +9,7 @@
     "removeComments": true,
     "sourceMap": true,
     "esModuleInterop": true,
+    "strictNullChecks": true,
     "outDir": "dist",
     "declaration": true,
     "baseUrl": ".",
@@ -24,7 +25,7 @@
       "tests/*": ["tests/*"]
     }
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
   "exclude": [
     "node_modules/**/*",
     ".webpack/**/*"

@@ -1,6 +1,8 @@
 module.exports = {
+    root: true,
     env: {
         es2021: true,
+        jest: true
     },
     settings: {
         "import/resolver": {
@@ -14,13 +16,13 @@ module.exports = {
         tsconfigRootDir: __dirname,
         project: "./tsconfig.json",
     },
-    plugins: ["@typescript-eslint", "import"],
     extends: [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "prettier",
     ],
-    ignorePatterns: [".eslint*", "jest.*", "webpack*"],
+    plugins: ["@typescript-eslint", "import", "prettier"],
+    ignorePatterns: [".eslintrc.js", "jest.config.js", "webpack.config.js"],
     rules: {
         "@typescript-eslint/no-restricted-imports": [
             "error",
@@ -42,6 +44,7 @@ module.exports = {
                             "@application/*",
                             "@infrastructure/*",
                             "tests/*",
+                            "../*"
                         ],
                     },
                 ],
@@ -53,7 +56,7 @@ module.exports = {
                 "@typescript-eslint/no-restricted-imports": [
                     "error",
                     {
-                        patterns: ["src/*", "@infrastructure/*", "tests/*"],
+                        patterns: ["src/*", "@infrastructure/*", "tests/*", "../*"],
                     },
                 ],
             },
@@ -64,7 +67,7 @@ module.exports = {
                 "@typescript-eslint/no-restricted-imports": [
                     "error",
                     {
-                        patterns: ["src/*", "tests/*"],
+                        patterns: ["src/*", "tests/*", "../*"],
                     },
                 ],
             },
