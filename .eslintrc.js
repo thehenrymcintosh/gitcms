@@ -17,6 +17,14 @@ module.exports = {
   ignorePatterns: [".eslintrc.js", "jest.config.js", "webpack.config.js", "dist"],
   rules: {
     "@typescript-eslint/semi": ["error", "always"],
+    "@typescript-eslint/no-restricted-imports": [
+      "error",
+      {
+        patterns: [
+          "../*",
+        ],
+      },
+    ],
   },
   overrides: [
     {
@@ -30,7 +38,8 @@ module.exports = {
               "@application/*",
               "@infrastructure/*",
               "tests/*",
-              "../*"
+              "../*",
+              "./*"
             ],
           },
         ],
@@ -53,7 +62,7 @@ module.exports = {
         "@typescript-eslint/no-restricted-imports": [
           "error",
           {
-            patterns: ["src/*", "tests/*", "../*"],
+            patterns: ["src/*", "tests/*", "../*", ],
           },
         ],
       },
