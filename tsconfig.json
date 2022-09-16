@@ -13,10 +13,6 @@
     "outDir": "dist",
     "declaration": true,
     "baseUrl": ".",
-    "rootDirs": [
-      "src",
-      "tests"
-    ],
     "resolveJsonModule": true,
     "paths": {
       "@application/*": ["src/application/*"],
